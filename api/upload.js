@@ -88,7 +88,7 @@ export default async function handler(req, res) {
     const response = await makeRequest(githubUrl, options, requestData);
     
     if (response.ok) {
-      const publicUrl = `storage-kappa-ashen.vercel.app/${githubPath}`;
+      const publicUrl = `https://storage-kappa-ashen.vercel.app/${githubPath}`;
       return res.status(200).json({
         success: true,
         url: publicUrl,
