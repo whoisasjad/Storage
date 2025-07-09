@@ -52,7 +52,7 @@ export default async function handler(req, res) {
 
     // GitHub configuration
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-    const GITHUB_REPO = 'a4axjd/Storage';
+    const GITHUB_REPO = 'whoisasjad/Storage';
 
     if (!GITHUB_TOKEN) {
       return res.status(500).json({ error: 'GitHub token not configured' });
@@ -88,7 +88,7 @@ export default async function handler(req, res) {
     const response = await makeRequest(githubUrl, options, requestData);
     
     if (response.ok) {
-      const publicUrl = `https://a4axjd.github.io/Storage/${githubPath}`;
+      const publicUrl = `storage-kappa-ashen.vercel.app/${githubPath}`;
       return res.status(200).json({
         success: true,
         url: publicUrl,
