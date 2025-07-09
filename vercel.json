@@ -6,6 +6,23 @@
   },
   "buildCommand": "echo 'No build required'",
   "outputDirectory": ".",
-  "installCommand": "echo 'No install required'"
+  "installCommand": "echo 'No install required'",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/images/$1"
+    },
+    {
+      "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|webp|svg|ico|woff|woff2|ttf|eot))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
-
