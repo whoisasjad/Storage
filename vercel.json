@@ -3,6 +3,9 @@
     "api/upload.js": {
       "maxDuration": 30
     }
-  }
+  },
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": ".",
+  "installCommand": "echo 'No install required'"
 }
 
